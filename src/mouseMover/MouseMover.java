@@ -3,9 +3,10 @@ package mouseMover;
 import java.awt.AWTException;
 import java.awt.Robot;
 
-public class Main {
+public class MouseMover implements Runnable {
 
-	public static void main(String[] args) {
+	@Override
+	public void run() {
 		// TODO Auto-generated method stub
 
 		try {
@@ -21,8 +22,8 @@ public class Main {
 				else
 					coordx += 100;
 
-				Thread.sleep(5000);
-				
+				Thread.sleep(30000);
+
 			}
 
 		} catch (AWTException e) {
