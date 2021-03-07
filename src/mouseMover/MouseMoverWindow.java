@@ -49,11 +49,11 @@ public class MouseMoverWindow {
 	private void initialize() {
 		frmMouseMover = new JFrame();
 		frmMouseMover.setResizable(false);
-		frmMouseMover.setTitle("Mouse Mover");
+		frmMouseMover.setTitle("Mouse Mover v0.2");
 		frmMouseMover.setBounds(100, 100, 325, 124);
 		frmMouseMover.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-		JLabel lblNewLabel = new JLabel("Mouse Mover");
+		JLabel lblNewLabel = new JLabel("Mouse Mover v0.2");
 		lblNewLabel.setHorizontalAlignment(SwingConstants.CENTER);
 		lblNewLabel.setFont(new Font("Tahoma", Font.PLAIN, 35));
 		frmMouseMover.getContentPane().add(lblNewLabel, BorderLayout.CENTER);

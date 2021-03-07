@@ -1,6 +1,8 @@
 package mouseMover;
 
 import java.awt.AWTException;
+import java.awt.MouseInfo;
+import java.awt.Point;
 import java.awt.Robot;
 
 public class MouseMover implements Runnable {
@@ -12,17 +14,22 @@ public class MouseMover implements Runnable {
 		try {
 			Robot robot = new Robot();
 
-			int coordx = 100;
-
 			while (true) {
-				robot.mouseMove(coordx, 100);
 
-				if (coordx == 200)
-					coordx -= 100;
-				else
-					coordx += 100;
+				// get current point
+				Point point = MouseInfo.getPointerInfo().getLocation();
 
-				Thread.sleep(30000);
+				// wait for time
+				Thread.sleep(540000); // 9 minutes 540000 ms
+
+				// if pointer has not moved: move slightly and put back in position
+				Point pointCurrent = MouseInfo.getPointerInfo().getLocation();
+
+				if (pointCurrent.equals(point)) {
+					robot.mouseMove(pointCurrent.x - 1, pointCurrent.y);
+					robot.mouseMove(pointCurrent.x + 1, pointCurrent.y);
+					robot.mouseMove(pointCurrent.x, pointCurrent.y);
+				}
 
 			}
 
