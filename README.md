@@ -4,7 +4,7 @@
 This application does exactly what the title says: it moves the mouse (pointer).
 
 ## Executable
-The only prerequisite is Java 1.8+ to be present in the system. The executable mouseMover.jar file can be downloaded from the Relases section.
+The only prerequisite is Java 1.8+ to be present in the system. The executable mouseMover.jar file can be downloaded from the Releases section.
 
 ## Usage
 When the application is executed a small window is displayed. The mouse pointer will be moved to coordinates 100x 100y and after 30 seconds it will automatically move to 200x 100y. The mouse pointer will move back and forth between those 2 points until the application window is closed.
