@@ -25,10 +25,11 @@ public class MouseMover implements Runnable {
 				// if pointer has not moved: move slightly and put back in position
 				Point pointCurrent = MouseInfo.getPointerInfo().getLocation();
 
-				if (pointCurrent.equals(point)){
-					robot.mouseMove(pointCurrent.x-1,pointCurrent.y);
+				if (pointCurrent.equals(point)) {
+					robot.mouseMove(pointCurrent.x - 1, pointCurrent.y);
 					robot.mouseMove(pointCurrent.x + 1, pointCurrent.y);
-					robot.mouseMove(pointCurrent.x, pointCurrent.y);}
+					robot.mouseMove(pointCurrent.x, pointCurrent.y);
+				}
 
 			}
 
