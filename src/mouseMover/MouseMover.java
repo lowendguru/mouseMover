@@ -9,7 +9,6 @@ public class MouseMover implements Runnable {
 
 	@Override
 	public void run() {
-		// TODO Auto-generated method stub
 
 		try {
 			Robot robot = new Robot();
@@ -20,7 +19,7 @@ public class MouseMover implements Runnable {
 				Point point = MouseInfo.getPointerInfo().getLocation();
 
 				// wait for time
-				Thread.sleep(540000); // 9 minutes 540000 ms
+				Thread.sleep(240000); // 4 minutes 240000 ms
 
 				// if pointer has not moved: move slightly and put back in position
 				Point pointCurrent = MouseInfo.getPointerInfo().getLocation();
