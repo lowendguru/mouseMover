@@ -45,11 +45,11 @@ void loop() {
     brightness = brightness + fadeAmount;
 
     // reverse the direction of the fading at the ends of the fade:
-    if (brightness <= 0 || brightness >= 128) {
+    if (brightness <= 0 || brightness >= 255) {
       fadeAmount = -fadeAmount;
     }
     // wait for 30 milliseconds to see the dimming effect
-    delay(100);
+    delay(30);
 
     currentMillis = millis();  //get the current time
     if (currentMillis - startMillis >= period) {
