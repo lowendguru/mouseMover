@@ -20,7 +20,7 @@ void setup() {
   Mouse.begin();
 
   startMillis = millis();  //initial start time
-  period = 240000;         // 4 minutes
+  period = 1000;         // 4 minutes
 
   toggle = EEPROM.read(eepromAddress);
 
@@ -49,14 +49,15 @@ void loop() {
       fadeAmount = -fadeAmount;
     }
     // wait for 30 milliseconds to see the dimming effect
-    delay(30);
+    delay(1000);
 
     currentMillis = millis();  //get the current time
     if (currentMillis - startMillis >= period) {
       // move mouse
-      Mouse.move(2, 0);
-      delay(50);
-      Mouse.move(-2, 0);
+      Mouse.move(100, 0);
+      delay(1000);
+      Mouse.move(-100, 0);
+      delay(1000);
       startMillis = currentMillis;
     }
   }
